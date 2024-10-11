@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(255, 248, 249);
+    width: 100vw;
+    overflow-x: hidden;
+    color: #57111b;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 48px;
+  }
+  
+  .outlet-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 100px); /* Assuming Navbar and Footer height takes 100px */
+  }
+  
+  .garage-list {
+    width: 30%; /* 1/3 part */
+    padding: 20px;
+  }
+  
+  .store-card {
+    background-color: #f3e6e8;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .store-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #57111b;
+  }
+  
+  .store-info p {
+    margin: 5px 0;
+  }
+  
+  .store-actions .btn {
+    background-color: #de5253;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .store-actions .btn:hover {
+    background-color: #bf4646;
+  }
+  
+  .outletmap {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .outletmap h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  

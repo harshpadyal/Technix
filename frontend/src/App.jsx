@@ -10,7 +10,7 @@ import RefrshHandler from './RefrshHandler';
 import OnlineStore from './pages/Onlinestore';
 import AppointmentForm from './pages/AppointmentForm';
 import MyAppointments from './pages/MyAppointments';
-import OfflineMap from './pages/OfflineMap';
+import Offline from './pages/Offline';
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/appointment' element={<AppointmentForm/>} />
         <Route path='/myappointments' element={<MyAppointments/>} />
-        {/* <Route path="/offline-map" element={<OfflineMap />} /> */}
+        <Route path="/offline-map" element={<Offline/>} /> 
         {/* <Route path='/home' element={<PrivateRoute element={<Home />} />} /> */}
       </Routes>
 
