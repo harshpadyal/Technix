@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(255, 248, 249);
+    width: 100vw;
+    overflow-x: hidden;
+    color: #57111b;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 48px;
+  }
+  
+  .outlet-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 100px); /* Assuming Navbar and Footer height takes 100px */
+  }
+  
+  .garage-list {
+    width: 30%; /* 1/3 part */
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+  
+/* Highlight the selected garage card */
+.store-card.highlight {
+    background-color: #f0f0f0;
+    border: 2px solid #f07c22;
+  }
+  
+
+  .outletmap {
+    width: 70%; /* 2/3 part */
+    height: 100%;
+  }
+  
+  .stores-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .store-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  
+  .store-header h3 {
+    color: #f07c22;
+  }
+  
+  .store-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .store-info p {
+    margin: 0.3rem 0;
+  }
+
+  .emergency-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .emergency-button {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .emergency-button:hover {
+    background-color: orange;
+    color: black;
+  }
+  
+  .emergency-book-now {
+    background-color: #f57224; /* Orange color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .emergency-book-now:hover {
+    background-color: #e15e1a; /* Slightly darker orange for hover effect */
+  }
+  
