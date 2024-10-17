@@ -48,6 +48,86 @@ const Offline = () => {
             openUntil: '08:00 PM',
             lat: 19.064790,
             lng: 72.896672
+        },
+        {
+            name: 'Tata Motors Service Center',
+            address: 'Chembur, Mumbai, Maharashtra 400071',
+            phone: '02225281177',
+            openUntil: '06:00 PM',
+            lat: 19.060345,
+            lng: 72.897123
+        },
+        {
+            name: 'Mansukh Motors',
+            address: 'Sion-Trombay Road, Chembur East, Mumbai, Maharashtra 400071',
+            phone: '02225275555',
+            openUntil: '07:00 PM',
+            lat: 19.065432,
+            lng: 72.902987
+        },
+        {
+            name: 'Royal Motors Garage',
+            address: 'VN Purav Marg, Chembur East, Mumbai, Maharashtra 400071',
+            phone: '02225256677',
+            openUntil: '09:00 PM',
+            lat: 19.068889,
+            lng: 72.898911
+        },
+        {
+            name: 'Ravi Auto Garage',
+            address: 'RC Marg, Chembur East, Mumbai, Maharashtra 400071',
+            phone: '02225275588',
+            openUntil: '08:00 PM',
+            lat: 19.062875,
+            lng: 72.898321
+        },
+        {
+            name: 'Vivek Motors',
+            address: 'Chembur Naka, Mumbai, Maharashtra 400071',
+            phone: '02225271234',
+            openUntil: '07:30 PM',
+            lat: 19.061452,
+            lng: 72.900566
+        },
+        {
+            name: 'Rohan Car Care',
+            address: 'Sindhi Society, Chembur, Mumbai, Maharashtra 400071',
+            phone: '02225261145',
+            openUntil: '07:00 PM',
+            lat: 19.062999,
+            lng: 72.896211
+        },
+        {
+            name: 'Krishna Auto Works',
+            address: 'Vashi Naka, Chembur, Mumbai, Maharashtra 400074',
+            phone: '02225286677',
+            openUntil: '08:00 PM',
+            lat: 19.062543,
+            lng: 72.895001
+        },
+        {
+            name: 'Gautam Garage',
+            address: '14th Road, Chembur, Mumbai, Maharashtra 400071',
+            phone: '02225293333',
+            openUntil: '08:30 PM',
+            lat: 19.065109,
+            lng: 72.895211
+        },
+        {
+            name: 'Metro Motors Garage',
+            address: 'Tilak Nagar, Chembur, Mumbai, Maharashtra 400089',
+            phone: '02225219977',
+            openUntil: '08:00 PM',
+            lat: 19.061099,
+            lng: 72.894899
+        },
+        {
+            name: 'Bharat Auto Garage',
+            address: 'RC Marg, Chembur East, Mumbai, Maharashtra 400071',
+            phone: '02225267788',
+            openUntil: '07:00 PM',
+            lat: 19.062211,
+            lng: 72.899111
         }
     ];
 

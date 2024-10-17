@@ -80,13 +80,13 @@ const AppointmentForm = () => {
     if (!formData.name || !formData.email || !formData.vehicle || !formData.service) {
       return handleError('Name, Email, Vehicle, and Service are required!');
     }
-
+  
     try {
       const localEmail = localStorage.getItem('loggedInEmail');
       if (!localEmail) {
         return handleError('Local email not found. Please Login or Signup.');
       }
-
+  
       const url = 'http://localhost:3000/appointments/book'; // Corrected URL formatting
       const response = await fetch(url, {
         method: 'POST',
@@ -103,12 +103,26 @@ const AppointmentForm = () => {
           local_email: localEmail,
         }),
       });
-
+  
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Something went wrong!');
       }
-
+  
+      // Save the appointment to local storage
+      const newAppointment = {
+        id: new Date().getTime(), // Simple unique ID
+        ...formData,
+        date: new Date().toISOString(), // Current date and time
+        email: localEmail,
+      };
+  
+      // Get existing appointments from local storage
+      const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
+      
+      // Update appointments in local storage
+      localStorage.setItem('appointments', JSON.stringify([...existingAppointments, newAppointment]));
+  
       handleSuccess('Appointment booked successfully!');
       setFormData({
         name: '',
@@ -123,6 +137,7 @@ const AppointmentForm = () => {
       handleError(error.message || 'Failed to book appointment');
     }
   };
+  
 
   return (
     <>

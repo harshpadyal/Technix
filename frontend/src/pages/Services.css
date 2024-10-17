@@ -276,3 +276,11 @@ footer{
     padding: 0 2vw;
 
 }
+
+.card-price {
+    color: #e91e63; /* Price color */
+    font-weight: bold;
+    margin-top: 8px; /* Space between title and price */
+    font-size: 1.2em; /* Font size for price */
+    text-align: center; /* Center align the price */
+}

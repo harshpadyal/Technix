@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Services.css"
+import "./Services.css";
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -23,7 +23,7 @@ const Services = () => {
         {
             src: '/images/profile4.png',
             name: 'Vivek Gupta',
-            feedback: 'Used this app in my vactions due to emergency and it was very benificial app'
+            feedback: 'Used this app in my vacations due to emergency and it was very beneficial.'
         }
     ];
 
@@ -31,6 +31,16 @@ const Services = () => {
     const handleCardClick = (service) => {
         navigate('/appointment', { state: { selectedService: service } });
     };
+
+    // Define the services and their prices in Rupees
+    const servicesWithPrices = [
+        { name: 'Basic Car Service', imgSrc: '/images/car_service.png', price: '₹ 4,000' },
+        { name: 'Car Inspection', imgSrc: '/images/Car-Inspection.png', price: '₹ 2,500' },
+        { name: 'Used Car Inspection', imgSrc: '/images/used_car_inspection.jpg', price: '₹ 3,000' },
+        { name: 'Car Wash', imgSrc: '/images/car_wash.png', price: '₹ 800' },
+        { name: 'AC Repair', imgSrc: '/images/ac_repair.png', price: '₹ 6,500' },
+        { name: 'Windshields & Lights', imgSrc: '/images/windshields.png', price: '₹ 5,000' },
+    ];
 
     return (
         <>
@@ -48,43 +58,15 @@ const Services = () => {
                 </div>
 
                 <div className="box">
-                    {/* Passing the specific service names to handleCardClick */}
-                    <div className="card-container" onClick={() => handleCardClick('Basic Car Service')}>
-                        <div className="card">
-                            <img className="img" src="/images/car_service.png" alt="Basic Car Service" />
-                            <div className="card-title"><b>Basic Car Service</b></div>
+                    {servicesWithPrices.map((service, index) => (
+                        <div key={index} className="card-container" onClick={() => handleCardClick(service.name)}>
+                            <div className="card">
+                                <img className="img" src={service.imgSrc} alt={service.name} />
+                                <div className="card-title"><b>{service.name}</b></div>
+                                <div className="card-price">{service.price}</div> {/* Price added here */}
+                            </div>
                         </div>
-                    </div>
-                    <div className="card-container" onClick={() => handleCardClick('Car Inspection')}>
-                        <div className="card">
-                            <img className="img" src="/images/Car-Inspection.png" alt="Car Inspection" />
-                            <div className="card-title"><b>Car Inspection</b></div>
-                        </div>
-                    </div>
-                    <div className="card-container" onClick={() => handleCardClick('Used Car Inspection')}>
-                        <div className="card">
-                            <img className="img" src="/images/used_car_inspection.jpg" alt="Used Car Inspection" />
-                            <div className="card-title"><b>Used Car Inspection</b></div>
-                        </div>
-                    </div>
-                    <div className="card-container" onClick={() => handleCardClick('Car Wash')}>
-                        <div className="card">
-                            <img className="img" src="/images/car_wash.png" alt="Car Wash" />
-                            <div className="card-title"><b>Car Wash</b></div>
-                        </div>
-                    </div>
-                    <div className="card-container" onClick={() => handleCardClick('AC Repair')}>
-                        <div className="card">
-                            <img className="img" src="/images/ac_repair.png" alt="AC Repair" />
-                            <div className="card-title"><b>AC Repair</b></div>
-                        </div>
-                    </div>
-                    <div className="card-container" onClick={() => handleCardClick('Windshields & Lights')}>
-                        <div className="card">
-                            <img className="img1" src="/images/windshields.png" alt="Windshields & Lights" />
-                            <div className="card-title"><b>Windshields & Lights</b></div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
                 <div className="feedbacks">
