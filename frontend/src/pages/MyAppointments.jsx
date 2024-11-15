@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const MyAppointments = () => {
   const [appointments, setAppointments] = useState([]);
+  const navigate = useNavigate(); // Initialize useNavigate
   
   useEffect(() => {
     // Load appointments from localStorage
@@ -17,6 +19,11 @@ const MyAppointments = () => {
     setAppointments(updatedAppointments);
     localStorage.setItem('appointments', JSON.stringify(updatedAppointments));
     toast.success('Appointment cancelled successfully!');
+  };
+
+  const handleFeedback = (id) => {
+    // Redirect to the Feedback page and pass the appointment ID as a state
+    navigate(`/feedback`, { state: { appointmentId: id } });
   };
 
   return (
@@ -58,19 +65,34 @@ const MyAppointments = () => {
                 <p style={{ color: '#57111B' }}>Date: {new Date(appointment.date).toLocaleString()}</p>
                 <p style={{ color: '#57111B' }}>Location: {appointment.location}</p>
                 <p style={{ color: '#57111B' }}>Notes: {appointment.notes}</p>
-                <button
-                  onClick={() => handleCancelAppointment(appointment.id)}
-                  style={{
-                    backgroundColor: '#57111B',
-                    color: '#fff',
-                    padding: '8px 12px',
-                    borderRadius: '4px',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  Cancel Appointment
-                </button>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button
+                    onClick={() => handleCancelAppointment(appointment.id)}
+                    style={{
+                      backgroundColor: '#57111B',
+                      color: '#fff',
+                      padding: '8px 12px',
+                      borderRadius: '4px',
+                      border: 'none',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Cancel Appointment
+                  </button>
+                  <button
+                    onClick={() => handleFeedback(appointment.id)}
+                    style={{
+                      backgroundColor: '#4caf50',
+                      color: '#fff',
+                      padding: '8px 12px',
+                      borderRadius: '4px',
+                      border: 'none',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Feedback
+                  </button>
+                </div>
               </div>
             ))
           ) : (

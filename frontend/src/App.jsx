@@ -11,6 +11,8 @@ import OnlineStore from './pages/Onlinestore';
 import AppointmentForm from './pages/AppointmentForm';
 import MyAppointments from './pages/MyAppointments';
 import Offline from './pages/Offline';
+import FeedbackPage from './pages/FeedbackPage';
+import Blog from './pages/Blog';
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
         <Route path='/appointment' element={<AppointmentForm/>} />
         <Route path='/myappointments' element={<MyAppointments/>} />
         <Route path="/offline-map" element={<Offline/>} /> 
+        <Route path="/feedback" element={<FeedbackPage/>} />
+        {/* <Route path="/blog" element={<Blog/>} /> */}
         {/* <Route path='/home' element={<PrivateRoute element={<Home />} />} /> */}
       </Routes>
 

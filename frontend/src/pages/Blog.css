@@ -1,0 +1,53 @@
+/* Blog Container */
+.blog-container {
+    padding: 20px;
+    background-color: #fce4ec; /* Fallback color */
+    background-image: url('https://example.com/CarService.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Blog Title */
+  .blog-title {
+    color: #57111b;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Blog Post */
+  .blog-post {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for better visibility */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Post Image */
+  .blog-post img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Post Title */
+  .blog-post-title {
+    color: #57111b;
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  /* Post Content */
+  .blog-post-content {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .blog-post-title {
+      font-size: 1.2em;
+    }
+  }
+  

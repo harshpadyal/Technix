@@ -34,7 +34,9 @@ const Navbar = ({ handleLogout }) => {
         
         <li><NavLink to="/outlets" activeclassname="active">NEARBY GARAGES</NavLink></li>
 
-        <li><NavLink to="/offline-map" activeclassname="active">OFFLINE</NavLink></li> 
+        <li><NavLink to="/offline-map" activeclassname="active">OFFLINE</NavLink></li>
+
+        {/* <li><NavLink to="/blog" activeclassname="active">BLOG</NavLink></li>  */}
 
         
 
